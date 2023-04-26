@@ -19,11 +19,11 @@ program
     'Contract address that will own the deployed artifacts after the script runs'
   )
   .option('-s, --state <path>', 'Path to the JSON file containing the migrations state (optional)', './state.json')
-  .option('-v2, --v2-core-factory-address <address>', 'The V2 core factory address used in the swap router (optional)')
+  .option('-v1, --v1-core-factory-address <address>', 'The V1 core factory address used in the swap router (optional)')
   .option('-g, --gas-price <number>', 'The gas price to pay in GWEI for each transaction (optional)')
   .option('-c, --confirmations <number>', 'How many confirmations to wait for after each transaction (optional)', '2')
 
-program.name('npx @uniswap/deploy-v3').version(version).parse(process.argv)
+program.name('npx @pollum-io/v2-deploy').version(version).parse(process.argv)
 
 if (!/^0x[a-zA-Z0-9]{64}$/.test(program.privateKey)) {
   console.error('Invalid private key!')
@@ -70,12 +70,12 @@ try {
   process.exit(1)
 }
 
-let v2CoreFactoryAddress: string
-if (typeof program.v2CoreFactoryAddress === 'undefined') {
-  v2CoreFactoryAddress = AddressZero
+let v1CoreFactoryAddress: string
+if (typeof program.v1CoreFactoryAddress === 'undefined') {
+  v1CoreFactoryAddress = AddressZero
 } else {
   try {
-    v2CoreFactoryAddress = getAddress(program.v2CoreFactoryAddress)
+    v1CoreFactoryAddress = getAddress(program.v1CoreFactoryAddress)
   } catch (error) {
     console.error('Invalid V2 factory address', (error as Error).message)
     process.exit(1)
@@ -117,7 +117,7 @@ async function run() {
     signer: wallet,
     gasPrice,
     nativeCurrencyLabelBytes,
-    v2CoreFactoryAddress,
+    v1CoreFactoryAddress,
     ownerAddress,
     weth9Address,
     initialState: state,

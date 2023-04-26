@@ -3,7 +3,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { GenericMigrationStep } from './migrate'
 
 export interface MigrationState {
-  readonly v3CoreFactoryAddress?: string
+  readonly v2CoreFactoryAddress?: string
   readonly swapRouter02?: string
   readonly nftDescriptorLibraryAddressV1_3_0?: string
   readonly nonfungibleTokenPositionDescriptorAddressV1_3_0?: string
@@ -12,8 +12,8 @@ export interface MigrationState {
   readonly proxyAdminAddress?: string
   readonly quoterV2Address?: string
   readonly tickLensAddress?: string
-  readonly v3MigratorAddress?: string
-  readonly v3StakerAddress?: string
+  readonly v2MigratorAddress?: string
+  readonly v2StakerAddress?: string
   readonly nonfungibleTokenPositionManagerAddress?: string
 }
 
@@ -24,7 +24,7 @@ export type MigrationConfig = {
   gasPrice: BigNumber | undefined
   weth9Address: string
   nativeCurrencyLabelBytes: string
-  v2CoreFactoryAddress: string
+  v1CoreFactoryAddress: string
   ownerAddress: string
 }
 

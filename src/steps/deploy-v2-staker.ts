@@ -1,4 +1,4 @@
-import UniswapV3Staker from '@uniswap/v3-staker/artifacts/contracts/UniswapV3Staker.sol/UniswapV3Staker.json'
+import PegasysV2Staker from '@pollum-io/v2-staker/artifacts/contracts/PegasysV2Staker.sol/PegasysV2Staker.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
 const ONE_MINUTE_SECONDS = 60
@@ -12,18 +12,18 @@ const MAX_INCENTIVE_START_LEAD_TIME = ONE_MONTH_SECONDS
 // 1892160000
 const MAX_INCENTIVE_DURATION = ONE_YEAR_SECONDS * 2
 
-export const DEPLOY_V3_STAKER = createDeployContractStep({
-  key: 'v3StakerAddress',
-  artifact: UniswapV3Staker,
+export const DEPLOY_V2_STAKER = createDeployContractStep({
+  key: 'v2StakerAddress',
+  artifact: PegasysV2Staker,
   computeArguments(state) {
-    if (state.v3CoreFactoryAddress === undefined) {
-      throw new Error('Missing V3 Core Factory')
+    if (state.v2CoreFactoryAddress === undefined) {
+      throw new Error('Missing V2 Core Factory')
     }
     if (state.nonfungibleTokenPositionManagerAddress === undefined) {
       throw new Error('Missing NFT contract')
     }
     return [
-      state.v3CoreFactoryAddress,
+      state.v2CoreFactoryAddress,
       state.nonfungibleTokenPositionManagerAddress,
       MAX_INCENTIVE_START_LEAD_TIME,
       MAX_INCENTIVE_DURATION,
