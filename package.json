@@ -1,7 +1,7 @@
 {
-  "name": "@pollum-io/v2-deploy",
+  "name": "@pollum-io/v3-deploy",
   "version": "0.0.1",
-  "description": "Deploy Pegasys V2 smart contracts",
+  "description": "Deploy Pegasys V3 smart contracts",
   "bin": "dist/index.js",
   "publishConfig": {
     "access": "public"
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pegasys-fi/v2-deploy.git"
+    "url": "git+https://github.com/pegasys-fi/v3-deploy.git"
   },
   "author": {
     "email": "contact@pegasys.fi",
@@ -32,7 +32,7 @@
   },
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/pegasys-fi/v2-deploy/issues"
+    "url": "https://github.com/pegasys-fi/v3-deploy/issues"
   },
   "homepage": "https://pegasys.fi",
   "devDependencies": {
@@ -47,11 +47,11 @@
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.3",
     "@types/node": "^14.6.3",
-    "@pollum-io/sdk-core": "0.0.2",
-    "@pollum-io/swap-router-contracts": "0.0.1",
-    "@pollum-io/v2-core": "0.0.1",
-    "@pollum-io/v2-periphery": "0.0.1",
-    "@pollum-io/v2-staker": "0.0.1",
+    "@pollum-io/sdk-core": "0.0.3",
+    "@pollum-io/swap-router-contracts": "0.0.5",
+    "@pollum-io/v3-core": "0.0.1",
+    "@pollum-io/v3-periphery": "0.0.1",
+    "@pollum-io/v3-staker": "0.0.1",
     "@vercel/ncc": "^0.33.1",
     "chai": "^4.2.0",
     "commander": "^6.1.0",

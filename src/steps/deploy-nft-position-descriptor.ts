@@ -1,4 +1,4 @@
-import NonfungibleTokenPositionDescriptor from '@pollum-io/v2-periphery/artifacts/contracts/NonfungibleTokenPositionDescriptor.sol/NonfungibleTokenPositionDescriptor.json'
+import NonfungibleTokenPositionDescriptor from '@pollum-io/v3-periphery/artifacts/contracts/NonfungibleTokenPositionDescriptor.sol/NonfungibleTokenPositionDescriptor.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
 export const DEPLOY_NFT_POSITION_DESCRIPTOR_V1_3_0 = createDeployContractStep({

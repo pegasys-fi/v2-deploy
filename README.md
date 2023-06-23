@@ -1,16 +1,16 @@
-# Deploy Pegasys V2 Script
+# Deploy Pegasys V3 Script
 
-This package includes a CLI script for deploying the latest Pegasys V2 smart contracts to any EVM (Ethereum Virtual Machine) compatible network.
+This package includes a CLI script for deploying the latest Pegasys V3 smart contracts to any EVM (Ethereum Virtual Machine) compatible network.
 ## Usage
 
-This package vends a CLI for executing a deployment script that results in a full deployment of Pegasys Protocol v2.
-Get the arguments for running the latest version of the script via `npx @pollum-io/v2-deploy --help`.
+This package vends a CLI for executing a deployment script that results in a full deployment of Pegasys Protocol v3.
+Get the arguments for running the latest version of the script via `npx @pollum-io/v3-deploy --help`.
 
 As of `v0.0.1` the arguments are:
 
 ```text
-> npx @pollum-io/v2-deploy --help
-Usage: npx @pollum-io/v2-deploy [options]
+> npx @pollum-io/v3-deploy --help
+Usage: npx @pollum-io/v3-deploy [options]
 
 Options:
   -pk, --private-key <string>               Private key used to deploy all contracts
@@ -19,7 +19,7 @@ Options:
   -ncl, --native-currency-label <string>    Native currency label, e.g. ETH
   -o, --owner-address <address>             Contract address that will own the deployed artifacts after the script runs
   -s, --state <path>                        Path to the JSON file containing the migrations state (optional) (default: "./state.json")
-  -v1, --v1-core-factory-address <address>  The V2 core factory address used in the swap router (optional)
+  -v1, --v1-core-factory-address <address>  The V1 core factory address used in the swap router (optional)
   -g, --gas-price <number>                  The gas price to pay in GWEI for each transaction (optional)
   -c, --confirmations <number>              How many confirmations to wait for after each transaction (optional) (default: "2")
   -V, --version                             output the version number

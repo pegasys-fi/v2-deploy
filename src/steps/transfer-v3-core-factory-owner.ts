@@ -2,10 +2,7 @@ import PegasysV3Factory from '@pollum-io/v3-core/artifacts/contracts/PegasysV3Fa
 import { Contract } from '@ethersproject/contracts'
 import { MigrationStep } from '../migrations'
 
-const ONE_BP_FEE = 100
-const ONE_BP_TICK_SPACING = 1
-
-export const ADD_1BP_FEE_TIER: MigrationStep = async (state, { signer, gasPrice }) => {
+export const TRANSFER_V3_CORE_FACTORY_OWNER: MigrationStep = async (state, { signer, gasPrice, ownerAddress }) => {
   if (state.v3CoreFactoryAddress === undefined) {
     throw new Error('Missing PegasysV3Factory')
   }
@@ -13,14 +10,22 @@ export const ADD_1BP_FEE_TIER: MigrationStep = async (state, { signer, gasPrice 
   const v3CoreFactory = new Contract(state.v3CoreFactoryAddress, PegasysV3Factory.abi, signer)
 
   const owner = await v3CoreFactory.owner()
+  if (owner === ownerAddress)
+    return [
+      {
+        message: `PegasysV3Factory owned by ${ownerAddress} already`,
+      },
+    ]
+
   if (owner !== (await signer.getAddress())) {
     throw new Error('PegasysV3Factory.owner is not signer')
   }
-  const tx = await v3CoreFactory.enableFeeAmount(ONE_BP_FEE, ONE_BP_TICK_SPACING, { gasPrice })
+
+  const tx = await v3CoreFactory.setOwner(ownerAddress, { gasPrice })
 
   return [
     {
-      message: `PegasysV3Factory added a new fee tier ${ONE_BP_FEE / 100} bps with tick spacing ${ONE_BP_TICK_SPACING}`,
+      message: `PegasysV3Factory ownership set to ${ownerAddress}`,
       hash: tx.hash,
     },
   ]

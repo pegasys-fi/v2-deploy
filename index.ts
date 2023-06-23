@@ -23,7 +23,7 @@ program
   .option('-g, --gas-price <number>', 'The gas price to pay in GWEI for each transaction (optional)')
   .option('-c, --confirmations <number>', 'How many confirmations to wait for after each transaction (optional)', '2')
 
-program.name('npx @pollum-io/v2-deploy').version(version).parse(process.argv)
+program.name('npx @pollum-io/v3-deploy').version(version).parse(process.argv)
 
 if (!/^0x[a-zA-Z0-9]{64}$/.test(program.privateKey)) {
   console.error('Invalid private key!')
@@ -77,7 +77,7 @@ if (typeof program.v1CoreFactoryAddress === 'undefined') {
   try {
     v1CoreFactoryAddress = getAddress(program.v1CoreFactoryAddress)
   } catch (error) {
-    console.error('Invalid V2 factory address', (error as Error).message)
+    console.error('Invalid V1 factory address', (error as Error).message)
     process.exit(1)
   }
 }

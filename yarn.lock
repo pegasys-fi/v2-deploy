@@ -587,10 +587,10 @@
   dependencies:
     web3 "^1.7.3"
 
-"@pollum-io/sdk-core@0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@pollum-io/sdk-core/-/sdk-core-0.0.2.tgz#4370ad14647ad7841e7f3a6bd36b726c791d83e5"
-  integrity sha512-2jg2jYuDeBLqO+MGaXTrvLS40WNFLKPsg8TQgO6V2wXXUWI187/KOJYUw7EDrXaJgvdk+XIwwRqc0FEuDhLr1A==
+"@pollum-io/sdk-core@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@pollum-io/sdk-core/-/sdk-core-0.0.3.tgz#407e2b958ad56da3244c6022552025e37ae3f631"
+  integrity sha512-kL6eIpvcMyR2eRXliAYoKE9f1u5vfU+IwQeESaMcKdRB5KKZ8J+hmC7BSEsU/wvcMKHJ5AQSBWAElvzy2J/8Ig==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
@@ -599,44 +599,44 @@
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
-"@pollum-io/swap-router-contracts@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@pollum-io/swap-router-contracts/-/swap-router-contracts-0.0.1.tgz#5852e359a3cd6173c79ed28b4f4a0863ef4a97c2"
-  integrity sha512-ANHo+qR4o5W5COaKkxqsihqVym1do4/GdkRM3nWlvTnF5bd6WvmZN8EQUnBl7xId+Tz6BvE4R37XtfHpFQDt+g==
+"@pollum-io/swap-router-contracts@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@pollum-io/swap-router-contracts/-/swap-router-contracts-0.0.5.tgz#5827f8c2075ca12ca7ca89d10faf814ec9894306"
+  integrity sha512-cyh58Ud+qSQNRDWuwjkq0yUpDXClqq6SQTG4Vp/3OQgTwTVxAqAL0qD73JzMc6YyY7p4hTBj7Uws+7Mh/kD7lg==
   dependencies:
     "@openzeppelin/contracts" "3.4.2-solc-0.7"
     "@pollum-io/pegasys-protocol" "0.0.17"
-    "@pollum-io/v2-core" "0.0.1"
-    "@pollum-io/v2-periphery" "0.0.1"
+    "@pollum-io/v3-core" "0.0.1"
+    "@pollum-io/v3-periphery" "0.0.1"
     dotenv "^14.2.0"
     hardhat-watcher "^2.1.1"
 
-"@pollum-io/v2-core@0.0.1":
+"@pollum-io/v3-core@0.0.1":
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@pollum-io/v2-core/-/v2-core-0.0.1.tgz#4fa36136bf634872e54b5b4ede51f14a0ce54ba4"
-  integrity sha512-UOkpIKVYFAUt9OJQK/1Z3pzeky1sGmLDpbUt6/fa8tneqmbyyspCjz2Ib558fyO/ByqUVes3YhZGn5FDay+YaQ==
+  resolved "https://registry.yarnpkg.com/@pollum-io/v3-core/-/v3-core-0.0.1.tgz#7206e32b6bfbb5e21098eab29d45643944e59d53"
+  integrity sha512-l4VnKlKOokoIAzQdpoyHQWmWhfsl0qU5pAlNlsMI0G1ebCBv5sbapZfUr4vs4hiHO1ZxQBPfKQiC654GJC+C2w==
   dependencies:
     dotenv "^16.0.3"
 
-"@pollum-io/v2-periphery@0.0.1":
+"@pollum-io/v3-periphery@0.0.1":
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@pollum-io/v2-periphery/-/v2-periphery-0.0.1.tgz#003f968efd2b141e08e55682941aabb84da7e59c"
-  integrity sha512-OIEQTvUD6E3JxMMdEApFzbjn4Yb9UIzS/Ta0CwmLKcwqKOLPwMirfEPmsVeXLhapWH9hIRjJ863ShUJRJeYePQ==
+  resolved "https://registry.yarnpkg.com/@pollum-io/v3-periphery/-/v3-periphery-0.0.1.tgz#cb90ac69cd0f958e810c6970e4e3877c85037f8f"
+  integrity sha512-XjxfhNy8C+v6lgSxzQFaKX2x59zRTVbU2EyUK3IkgcMTDrWRqwHI5eaxn/kVaNzNngA+lYV0y9ofuNIl37VrTg==
   dependencies:
     "@openzeppelin/contracts" "3.4.2-solc-0.7"
     "@pollum-io/pegasys-protocol" "0.0.17"
-    "@pollum-io/v2-core" "0.0.1"
+    "@pollum-io/v3-core" "0.0.1"
     "@uniswap/lib" "^4.0.1-alpha"
     base64-sol "1.0.1"
 
-"@pollum-io/v2-staker@0.0.1":
+"@pollum-io/v3-staker@0.0.1":
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@pollum-io/v2-staker/-/v2-staker-0.0.1.tgz#f0e88065757e87774cd37d1e65749929ec9d72e9"
-  integrity sha512-1WVXe4yYm0cTP4ouwX22Nb+lky74UlUFUyB5I2uTaRlpQ0pTB4uv1qhDya7y38ilch+MfD2iEzUdzc/ZkivQ/A==
+  resolved "https://registry.yarnpkg.com/@pollum-io/v3-staker/-/v3-staker-0.0.1.tgz#f7b075538522b68bd134ffd444e4238f57475427"
+  integrity sha512-Km4Yp6SYfsGvklHY9Z7lOqYJ/ZJ7GO+3aD5ZelaMKVi+xobx9rgheOCDeDFJfNZsL01ktxGAkKWlC19tjusBkA==
   dependencies:
     "@openzeppelin/contracts" "3.4.1-solc-0.7-2"
-    "@pollum-io/v2-core" "0.0.1"
-    "@pollum-io/v2-periphery" "0.0.1"
+    "@pollum-io/v3-core" "0.0.1"
+    "@pollum-io/v3-periphery" "0.0.1"
 
 "@sindresorhus/is@^4.0.0", "@sindresorhus/is@^4.6.0":
   version "4.6.0"

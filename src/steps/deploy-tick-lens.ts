@@ -1,4 +1,4 @@
-import TickLens from '@pollum-io/v2-periphery/artifacts/contracts/lens/TickLens.sol/TickLens.json'
+import TickLens from '@pollum-io/v3-periphery/artifacts/contracts/lens/TickLens.sol/TickLens.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
 export const DEPLOY_TICK_LENS = createDeployContractStep({
